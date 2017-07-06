@@ -15,3 +15,7 @@ Thumbs.db
 !config.js
 *.map
 *.d.ts
+
+#
+.idea/
+angular2-masonry.iml

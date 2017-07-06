@@ -68,6 +68,8 @@ export class AngularMasonry implements OnInit, OnDestroy {
         this._msnry.on('removeComplete', (items: any) => {
             this.removeComplete.emit(items);
         });
+
+        this.layout();
     }
 
     ngOnDestroy() {
@@ -104,8 +106,12 @@ export class AngularMasonry implements OnInit, OnDestroy {
                 // layout if first item
                 if(isFirstItem) this.layout();
             });
+            try{
+                this._element.nativeElement.removeChild(element);
+            }catch(Exception){
+                console.error("Masonry Error", Exception);
+            }
 
-            this._element.nativeElement.removeChild(element);
         }
         else {
             // Tell Masonry that a child element has been added
