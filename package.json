@@ -18,7 +18,7 @@
     "dev": "tsc -w",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "postinstall": "tsc -w ./"
+    "postinstall": "tsc -p ./"
   },
   "typings": "./index.d.ts",
   "repository": {
